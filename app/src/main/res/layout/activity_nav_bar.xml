@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:id="@+id/MainNavBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <View
+        android:id="@+id/marginTopLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#4D59C5"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/nav_bar_layout"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".NavBar"
+        android:orientation="horizontal"
+        android:layout_below="@id/marginTopLine"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ride"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ride"
+            android:fontFamily="@font/inter_variable_font"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@drawable/color_selector"
+            android:background="@drawable/top_navbar_ride_selector"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_drive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/drive"
+            android:fontFamily="@font/inter_variable_font"
+            android:textSize="20sp"
+            android:textColor="@drawable/color_selector"
+            android:textStyle="bold"
+            android:background="@drawable/top_navbar_drive_selector"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dynamic_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/nav_bar_layout"
+        />
+
+</RelativeLayout>

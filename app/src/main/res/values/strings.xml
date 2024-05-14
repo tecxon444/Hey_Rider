@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hey_Rider</string>
+    <string name="ride">Ride</string>
+    <string name="drive">Drive</string>
+</resources>
