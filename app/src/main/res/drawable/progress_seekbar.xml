@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/backgroung_seek"
+    android:height="8dp"
+    android:bottom="7dp"
+    android:top="7dp">
+    <shape android:shape="rectangle">
+        <corners android:radius="10dp"/>
+        <stroke android:color="@color/base_colour"/>
+
+    </shape>
+</item>
+    <item android:id="@+id/progress_seek"
+        android:height="8dp"
+        android:top="7dp"
+        android:bottom="7dp">
+        <clip android:clipOrientation="horizontal"
+            android:gravity="left">
+            <shape android:shape="rectangle">
+                <corners android:radius="8dp"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>
