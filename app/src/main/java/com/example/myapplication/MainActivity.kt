@@ -9,7 +9,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     // default selected
@@ -34,16 +35,23 @@ class MainActivity : AppCompatActivity() {
         val chatsTxt: TextView = findViewById(R.id.chats_txt)
         val profileTxt: TextView = findViewById(R.id.profile_txt)
 
-        //By default Home fragment
+        // BottomSheet
+        val buttonBottomSheet: FloatingActionButton = findViewById(R.id.floatingActionButton)
+        buttonBottomSheet.setOnClickListener {
+            val bottomsheetFragment = BottomSheetFragment()
+            bottomsheetFragment.show(supportFragmentManager, bottomsheetFragment.tag)
+        }
+
+        // By default Home fragment
         supportFragmentManager.beginTransaction()
             .setReorderingAllowed(true)
             .replace(R.id.fragmentContainer, HomeFragment(), null)
             .commit()
 
-//Selection of icons
+        // Selection of icons
         homeGroup.setOnClickListener {
             if (selectedTab != 1) {
-                //set Home
+                // set Home
                 supportFragmentManager.beginTransaction()
                     .setReorderingAllowed(true)
                     .replace(R.id.fragmentContainer, HomeFragment(), null)
@@ -77,12 +85,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         myRidesGroup.setOnClickListener {
-            //set Rides
+            // set Rides
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, MyRidesFragment(), null)
                 .commit()
-            //Visibility
+            // Visibility
             if (selectedTab != 2) {
                 // Unselect all others
                 homeTxt.visibility = View.GONE
@@ -113,12 +121,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         chatsGroup.setOnClickListener {
-            //Chats Fragment
+            // Chats Fragment
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, ChatsFragment(), null)
                 .commit()
-            //visibility
+            // Visibility
             if (selectedTab != 3) {
                 // Unselect all others
                 ridesTxt.visibility = View.GONE
@@ -149,12 +157,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         profileGroup.setOnClickListener {
-            //profile Fragment
+            // profile Fragment
             supportFragmentManager.beginTransaction()
                 .setReorderingAllowed(true)
                 .replace(R.id.fragmentContainer, ProfileFragment(), null)
                 .commit()
-            //visibility
+            // Visibility
             if (selectedTab != 4) {
                 // Unselect all others
                 ridesTxt.visibility = View.GONE
@@ -166,7 +174,6 @@ class MainActivity : AppCompatActivity() {
                 homeImage.setImageResource(R.drawable.group114)
 
                 myRidesGroup.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white))
-
                 chatsGroup.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white))
                 homeGroup.setBackgroundColor(ContextCompat.getColor(this, android.R.color.white))
 
