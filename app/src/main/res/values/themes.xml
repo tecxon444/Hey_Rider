@@ -2,8 +2,25 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
     <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+    <style name="FloatinGButton" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay" >@style/FabIcon</item>
+    </style>
+    <style name="FabIcon" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <item name="cornerSize" >50%</item>
+     <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/dialog_bg_bottomsheet</item>
+    </style>
 </resources>
