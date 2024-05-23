@@ -101,7 +101,7 @@
         android:background="@drawable/reason_rectangle_nocolor"
         android:backgroundTint="#C4CAF8"
         android:fontFamily="@font/interregular"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:paddingStart="30dp"
         android:text="xyz@gmail.com"
         android:layout_marginTop="25dp"
@@ -111,41 +111,58 @@
         app:layout_constraintStart_toStartOf="@+id/editTextText1"
         app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
 
-    <EditText
-        android:id="@+id/editTextText2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/statusDropdown"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="61dp"
+        android:hint="Select ..."
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/reason_rectangle_nocolor"
         android:backgroundTint="#C4CAF8"
-        android:fontFamily="@font/interregular"
-        android:inputType="text"
-        android:paddingStart="30dp"
-        android:text="Ride/Drive/Boths"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText1"
-        app:layout_constraintStart_toStartOf="@+id/editTextText1"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3">
+
+        <AutoCompleteTextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="30dp"
+            android:background="@drawable/reason_rectangle_nocolor"
+            android:backgroundTint="#C4CAF8"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:fontFamily="@font/interregular"
+            app:layout_constraintBottom_toBottomOf="@+id/statusDropdown"
+            app:layout_constraintEnd_toEndOf="@+id/statusDropdown"
+            app:layout_constraintStart_toStartOf="@+id/statusDropdown"
+            app:layout_constraintTop_toTopOf="@+id/statusDropdown" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/updateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@drawable/circleshape"
         android:paddingStart="80dp"
         android:paddingTop="5dp"
         android:paddingEnd="80dp"
         android:paddingBottom="5dp"
         android:text="Update"
-        android:layout_marginTop="40dp"
         android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/statusDropdown"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/statusDropdown"
+        app:layout_constraintTop_toBottomOf="@+id/statusDropdown" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
