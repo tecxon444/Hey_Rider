@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.EditProfileFragment">
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cross"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImageView1"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:background="@drawable/circleshape"
+        android:src="@drawable/profile_male"
+        app:civ_border_color="@color/mainColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cross" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImageView2"
+        android:layout_width="31dp"
+        android:layout_height="36dp"
+        android:background="@drawable/circleshape"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/pencil"
+        app:civ_border_color="@color/mainColor"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/circularImageView1"
+        app:layout_constraintEnd_toEndOf="@+id/circularImageView1" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/interbold"
+        android:text="Personal Details"
+        android:textColor="@color/black"
+        android:textSize="33sp"
+        app:layout_constraintEnd_toEndOf="@+id/circularImageView1"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/circularImageView1"
+        app:layout_constraintTop_toBottomOf="@+id/circularImageView1" />
+
+    <EditText
+        android:id="@+id/editTextText1"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/reason_rectangle_nocolor"
+        android:backgroundTint="#C4CAF8"
+        android:fontFamily="@font/interregular"
+        android:layout_marginTop="35dp"
+        android:inputType="text"
+        android:paddingStart="30dp"
+        android:text="Rahul"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/reason_rectangle_nocolor"
+        android:backgroundTint="#C4CAF8"
+        android:fontFamily="@font/interregular"
+        android:inputType="text"
+        android:paddingStart="30dp"
+        android:layout_marginTop="25dp"
+        android:text="Yadav"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText1"
+        app:layout_constraintStart_toStartOf="@+id/editTextText1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText1" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/reason_rectangle_nocolor"
+        android:backgroundTint="#C4CAF8"
+        android:fontFamily="@font/interregular"
+        android:inputType="text"
+        android:paddingStart="30dp"
+        android:text="xyz@gmail.com"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText1"
+        app:layout_constraintStart_toStartOf="@+id/editTextText1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/reason_rectangle_nocolor"
+        android:backgroundTint="#C4CAF8"
+        android:fontFamily="@font/interregular"
+        android:inputType="text"
+        android:paddingStart="30dp"
+        android:text="Ride/Drive/Boths"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText1"
+        app:layout_constraintStart_toStartOf="@+id/editTextText1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+
+    <TextView
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circleshape"
+        android:paddingStart="80dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="80dp"
+        android:paddingBottom="5dp"
+        android:text="Update"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
