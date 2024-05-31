@@ -28,6 +28,16 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        navigationfromParenttoChild()
+
+        binding.textView15.setOnClickListener {
+            LogoutFragment().show(parentFragmentManager,"Log out")
+        }
+
+    }
+
+    private fun navigationfromParenttoChild(){
         binding.view7.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
         }
@@ -36,9 +46,12 @@ class ProfileFragment : Fragment() {
             findNavController().navigate(R.id.action_profileFragment_to_verificationPageFragment)
         }
 
-        binding.textView15.setOnClickListener {
-            LogoutFragment().show(parentFragmentManager,"Log out")
+        binding.view10.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_aboutFragment)
+        }
+
+        binding.view8.setOnClickListener{
+            findNavController().navigate(R.id.action_profileFragment_to_preferencesFragment)
         }
     }
-
 }

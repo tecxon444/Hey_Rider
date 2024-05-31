@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.VerificationPageFragment">
 
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cross"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView17"
         android:layout_width="0dp"
@@ -17,7 +27,6 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

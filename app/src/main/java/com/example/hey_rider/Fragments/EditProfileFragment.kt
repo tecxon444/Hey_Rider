@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.hey_rider.R
 import com.example.hey_rider.databinding.FragmentEditProfileBinding
@@ -27,6 +28,10 @@ class EditProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setDropdown()
 
+        binding.updateBtn.setOnClickListener {
+            filledDetails()
+        }
+
         binding.cross.setOnClickListener {
             findNavController().navigate(R.id.action_editProfileFragment_to_profileFragment)
         }
@@ -39,5 +44,18 @@ class EditProfileFragment : Fragment() {
                 binding.statusDropdown.clearFocus()
             }
         }?.setAdapter(adapter)
+    }
+
+    private fun filledDetails(){
+
+        val firstName = binding.editTextText1.text
+        val lastName = binding.editTextText4.text
+        val mailId = binding.editTextText3.text
+
+        if(firstName.isNotEmpty() && lastName.isNotEmpty() && mailId.isNotEmpty() && binding.statusText.text.isNotEmpty()){
+            Toast.makeText(requireContext(), "Successful", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(requireContext(), "Please fill every field", Toast.LENGTH_SHORT).show()
+        }
     }
 }
