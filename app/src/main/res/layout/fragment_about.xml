@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.AboutFragment">
+
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="33dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewAbout"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backBtn" />
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/interregular"
+        android:text="About Us"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewAbout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/interlight"
+        android:text="Details about the company, mission, and team."
+        android:textColor="#4E4C4C"
+        app:layout_constraintStart_toStartOf="@id/tvAboutUs"
+        app:layout_constraintTop_toBottomOf="@id/tvAboutUs" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/forward"
+        app:layout_constraintEnd_toEndOf="@id/viewAbout"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="@id/viewAbout"
+        app:layout_constraintTop_toTopOf="@id/viewAbout" />
+
+
+    <View
+        android:id="@+id/viewTermsandConditions"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewAbout" />
+
+    <TextView
+        android:id="@+id/tvTermsAndConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/interregular"
+        android:text="Terms and Conditions"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewTermsandConditions" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/interlight"
+        android:text="Details about the company, mission, and team."
+        android:textColor="#4E4C4C"
+        app:layout_constraintStart_toStartOf="@id/tvTermsAndConditions"
+        app:layout_constraintTop_toBottomOf="@id/tvTermsAndConditions" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/forward"
+        app:layout_constraintEnd_toEndOf="@id/viewTermsandConditions"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="@id/viewTermsandConditions"
+        app:layout_constraintTop_toTopOf="@id/viewTermsandConditions" />
+
+    <Button
+        android:id="@+id/btnTermsofServices"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/mainColor"
+        android:fontFamily="@font/interregular"
+        android:padding="10dp"
+        android:text="Terms of Services"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/viewTermsandConditions"
+        app:layout_constraintStart_toStartOf="@+id/viewTermsandConditions"
+        app:layout_constraintTop_toBottomOf="@id/viewTermsandConditions" />
+
+    <Button
+        android:id="@+id/btnPrivacyPolicy"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/mainColor"
+        android:fontFamily="@font/interregular"
+        android:padding="10dp"
+        android:text="Privacy Policy"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/btnTermsofServices"
+        app:layout_constraintStart_toStartOf="@id/btnTermsofServices"
+        app:layout_constraintTop_toTopOf="@id/btnTermsofServices"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>

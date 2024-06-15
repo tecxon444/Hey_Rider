@@ -9,7 +9,23 @@
         android:id="@+id/profileFragment"
         android:name="com.example.hey_rider.Fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_rideHistoryFragment"
+            app:destination="@id/rideHistoryFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_preferencesFragment"
+            app:destination="@id/preferencesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.example.hey_rider.Fragments.ChatFragment"
@@ -24,4 +40,85 @@
         android:name="com.example.hey_rider.Fragments.ChatRoomFragment"
         android:label="fragment_chat_room"
         tools:layout="@layout/fragment_chat_room" />
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.hey_rider.Fragments.VerificationFragment"
+        android:label="fragment_verification"
+        tools:layout="@layout/fragment_verification" >
+        <action
+            android:id="@+id/action_verificationFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.hey_rider.Fragments.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rideHistoryFragment"
+        android:name="com.example.hey_rider.Fragments.RideHistoryFragment"
+        android:label="fragment_ride_history"
+        tools:layout="@layout/fragment_ride_history" >
+        <action
+            android:id="@+id/action_rideHistoryFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="com.example.hey_rider.Fragments.PreferencesFragment"
+        android:label="fragment_preferences"
+        tools:layout="@layout/fragment_preferences" >
+        <action
+            android:id="@+id/action_preferencesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_languageandRegionFragment"
+            app:destination="@id/languageandRegionFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageandRegionFragment"
+        android:name="com.example.hey_rider.Fragments.LanguageandRegionFragment"
+        android:label="fragment_languageand_region"
+        tools:layout="@layout/fragment_languageand_region" >
+        <action
+            android:id="@+id/action_languageandRegionFragment_to_preferencesFragment"
+            app:destination="@id/preferencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.hey_rider.Fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_notificationFragment_to_preferencesFragment"
+            app:destination="@id/preferencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.example.hey_rider.Fragments.PrivacyFragment"
+        android:label="fragment_privacy"
+        tools:layout="@layout/fragment_privacy" >
+        <action
+            android:id="@+id/action_privacyFragment_to_preferencesFragment"
+            app:destination="@id/preferencesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.hey_rider.Fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>

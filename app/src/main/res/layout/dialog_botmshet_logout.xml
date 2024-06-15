@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="130dp"
+            android:layout_height="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="#707070"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/confirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/interbold"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Are you sure want to log out?" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Yes"
+            android:fontFamily="@font/interregular"
+            android:backgroundTint="@color/mainColor"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="No"
+            android:fontFamily="@font/interregular"
+            android:backgroundTint="@color/mainColor"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
